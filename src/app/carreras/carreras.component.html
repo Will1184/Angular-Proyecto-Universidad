@@ -1,1 +1,32 @@
-<p>carreras works!</p>
+<table mat-table [dataSource]="carreras">
+  <!-- Definir las columnas -->
+  <ng-container matColumnDef ="id">
+    <th mat-header-cell *matHeaderCellDef>id</th>
+    <td mat-cell *matCellDef="let carrera">{{carrera.id}}</td>
+  </ng-container>
+  <ng-container matColumnDef="nombre">
+    <th mat-header-cell *matHeaderCellDef>nombre</th>
+    <td mat-cell *matCellDef="let carrera">{{carrera.nombre}}</td>
+  </ng-container>
+  <ng-container matColumnDef ="cantidadMaterias">
+    <th mat-header-cell *matHeaderCellDef>cantidadMaterias</th>
+    <td mat-cell *matCellDef="let carrera">{{carrera.cantidadMaterias}}</td>
+  </ng-container>
+  <ng-container matColumnDef="cantidadAnios">
+    <th mat-header-cell *matHeaderCellDef>cantidadAnios</th>
+    <td mat-cell *matCellDef="let carrera">{{carrera.cantidadAnios}}</td>
+  </ng-container>
+  <ng-container matColumnDef ="fechaAlta">
+    <th mat-header-cell *matHeaderCellDef>fechaAlta</th>
+    <td mat-cell *matCellDef="let carrera">{{carrera.fechaAlta}}</td>
+  </ng-container>
+  <ng-container matColumnDef="fechaModificacion">
+    <th mat-header-cell *matHeaderCellDef>fechaModificacion</th>
+    <td mat-cell *matCellDef="let carrera">{{carrera.fechaModificacion}}</td>
+  </ng-container>
+
+  <!-- Definir las cabeceras -->
+  <tr mat-header-row *matHeaderRowDef="['id','nombre','cantidadMaterias','cantidadAnios','fechaAlta','fechaModificacion']"></tr>
+  <!-- Definir las filas -->
+  <tr mat-row *matRowDef="let row; columns:['id','nombre','cantidadMaterias','cantidadAnios','fechaAlta','fechaModificacion']"></tr>
+</table>

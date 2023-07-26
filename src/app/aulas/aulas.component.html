@@ -1,1 +1,45 @@
-<p>aulas works!</p>
+<table mat-table [dataSource]="aulas">
+  <!-- Definir las columnas -->
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> id </th>
+    <td mat-cell *matCellDef="let aula"> {{ aula.id }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="nroAula">
+    <th mat-header-cell *matHeaderCellDef> Nombre </th>
+    <td mat-cell *matCellDef="let aula"> {{ aula.nroAula }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="medidas">
+    <th mat-header-cell *matHeaderCellDef> Apellido </th>
+    <td mat-cell *matCellDef="let aula"> {{ aula.medidas }} </td>
+  </ng-container>
+  <ng-container matColumnDef="cantPupitres">
+    <th mat-header-cell *matHeaderCellDef> dni </th>
+    <td mat-cell *matCellDef="let aula"> {{ aula.cantPupitres }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="pabellon">
+    <th mat-header-cell *matHeaderCellDef> direccion </th>
+    <td mat-cell *matCellDef="let aula"> {{ aula.pabellon }} </td>
+  </ng-container>
+  <ng-container matColumnDef="pizarron">
+    <th mat-header-cell *matHeaderCellDef> carrera </th>
+    <td mat-cell *matCellDef="let aula"> {{ aula.pizarron }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="fechaAlta">
+    <th mat-header-cell *matHeaderCellDef> fechaAlta </th>
+    <td mat-cell *matCellDef="let aula"> {{ aula.fechaAlta }} </td>
+  </ng-container>
+  <ng-container matColumnDef="fechaModificacion">
+    <th mat-header-cell *matHeaderCellDef> fechaModificacion </th>
+    <td mat-cell *matCellDef="let alumno"> {{ alumno.fechaModificacion }} </td>
+  </ng-container>
+
+  <!-- Definir las cabeceras -->
+  <tr mat-header-row *matHeaderRowDef="['id','nroAula', 'medidas','cantPupitres','pabellon','pizarron','fechaAlta','fechaModificacion']"></tr>
+  <!-- Definir las filas -->
+  <tr mat-row *matRowDef="let row; columns: ['id','nroAula', 'medidas','cantPupitres','pabellon','pizarron','fechaAlta','fechaModificacion']"></tr>
+</table>
+

@@ -1,1 +1,23 @@
-<p>empleados works!</p>
+<table mat-table [dataSource]="empleados" >
+  <!-- Definir las columnas -->
+  <ng-container matColumnDef="">
+    <th mat-header-cell *matHeaderCellDef></th>
+    <tr mat-cell *matHeaderRowDef="let empleado">{{empleado.}}</tr>
+  </ng-container>
+  <ng-container matColumnDef="">
+    <th mat-header-cell *matHeaderCellDef></th>
+    <tr mat-cell *matHeaderRowDef="let empleado">{{empleado.}}</tr>
+  </ng-container>
+  <ng-container matColumnDef="">
+    <th mat-header-cell *matHeaderCellDef></th>
+    <tr mat-cell *matHeaderRowDef="let empleado">{{empleado.}}</tr>
+  </ng-container>
+  <ng-container matColumnDef="">
+    <th mat-header-cell *matHeaderCellDef></th>
+    <tr mat-cell *matHeaderRowDef="let empleado">{{empleado.}}</tr>
+  </ng-container>
+  <ng-container matColumnDef="">
+    <th mat-header-cell *matHeaderCellDef></th>
+    <tr mat-cell *matHeaderRowDef="let empleado">{{empleado.}}</tr>
+  </ng-container>
+</table>

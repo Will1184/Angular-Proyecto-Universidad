@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeComponent } from './home/home.component';
 import { MatTableModule} from '@angular/material/table';
 import { AlumnosComponent } from './alumnos/alumnos.component';
 import { ProfesoresComponent } from './profesores/profesores.component';
@@ -16,8 +15,8 @@ import { PabellonesComponent } from './pabellones/pabellones.component';
 
 @NgModule({
   declarations: [
-    AppComponent,    
-    HomeComponent, AlumnosComponent, ProfesoresComponent, EmpleadosComponent, CarrerasComponent, AulasComponent, PabellonesComponent
+    AppComponent,
+    AlumnosComponent, ProfesoresComponent, EmpleadosComponent, CarrerasComponent, AulasComponent, PabellonesComponent
   ],
   imports: [
     BrowserModule,

@@ -7,12 +7,12 @@ import { Observable } from 'rxjs';
 })
 export class AlumnosService {
 
-  private urlAlumnos ='https://rickandmortyapi.com/api/character/1,183';
-  
+  private urlAlumnos ='http://localhost:8090/alumnos';
+
   constructor(private http:HttpClient) {}
 
-    public getAlumnos():Observable<any>{
+    public findAlumnos():Observable<any>{
       return this.http.get<any>(this.urlAlumnos);
     }
-  
+
 }
