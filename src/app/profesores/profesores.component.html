@@ -1,1 +1,44 @@
-<p>profesores works!</p>
+<table mat-table [dataSource]="profesores" >
+  <!-- Definir las columnas -->
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef>id</th>
+    <tr mat-cel *matCellDefDef="let profesor">{{profesor.id}</tr>
+  </ng-container>
+  <ng-container matColumnDef="nombre">
+    <th mat-header-cell *matHeaderCellDef>nombre</th>
+    <tr mat-cel *matCellDefDef="let profesor">{{profesor.nombre}</tr>
+  </ng-container>
+  <ng-container matColumnDef="apellido">
+    <th mat-header-cell *matHeaderCellDef>apellido</th>
+    <tr mat-cel *matCellDefDef="let profesor">{{profesor.apellido}</tr>
+  </ng-container>
+  <ng-container matColumnDef="dni">
+    <th mat-header-cell *matHeaderCellDef>dni</th>
+    <tr mat-cel *matCellDefDef="let profesor">{{profesor.dni}</tr>
+  </ng-container>
+  <ng-container matColumnDef="fechaAlta">
+    <th mat-header-cell *matHeaderCellDef>fechaAlta</th>
+    <tr mat-cel *matCellDefDef="let profesor">{{profesor.fechaAlta}</tr>
+  </ng-container>
+  <ng-container matColumnDef="fechaModificacion">
+    <th mat-header-cell *matHeaderCellDef>fechaModificacion</th>
+    <tr mat-cel *matCellDefDef="let profesor">{{profesor.fechaModificacion}</tr>
+  </ng-container>
+  <ng-container matColumnDef="sueldo">
+    <th mat-header-cell *matHeaderCellDef>sueldo</th>
+    <tr mat-cel *matCellDefDef="let profesor">{{profesor.sueldo}</tr>
+  </ng-container>
+  <ng-container matColumnDef="direccion">
+    <th mat-header-cell *matHeaderCellDef>direccion</th>
+    <tr mat-cel *matCellDefDef="let profesor">{{profesor.direccion}</tr>
+  </ng-container>
+  <ng-container matColumnDef="carreras">
+    <th mat-header-cell *matHeaderCellDef>carreras</th>
+    <tr mat-cel *matCellDefDef="let profesor">{{profesor.carreras}</tr>
+  </ng-container>
+
+  <!-- Definir las cabeceras -->
+  <tr mat-header-row *matHeaderRowDef="['id','nombre','apellido','dni','fechaAlta','fechaModificacion','sueldo','direccion','carreras']"></tr>
+  <!-- Definir las filas -->
+  <tr mat-row *matRowDef="let row; columns:['id','nombre','apellido','dni','fechaAlta','fechaModificacion','sueldo','direccion','carreras']"></tr>
+</table>

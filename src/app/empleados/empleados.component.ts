@@ -7,7 +7,7 @@ import {EmpleadosService} from "../service/empleados.service";
   styleUrls: ['./empleados.component.css']
 })
 export class EmpleadosComponent implements OnInit{
-  private empleados:[]=[];
+   empleados:[]=[];
   constructor(private empleadosService:EmpleadosService) {
   }
   ngOnInit(): void {

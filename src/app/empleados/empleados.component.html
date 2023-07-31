@@ -1,23 +1,50 @@
 <table mat-table [dataSource]="empleados" >
   <!-- Definir las columnas -->
-  <ng-container matColumnDef="">
-    <th mat-header-cell *matHeaderCellDef></th>
-    <tr mat-cell *matHeaderRowDef="let empleado">{{empleado.}}</tr>
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef>id</th>
+    <tr mat-cell *matHeaderRowDef="let empleado">{{empleado.id}}</tr>
   </ng-container>
-  <ng-container matColumnDef="">
-    <th mat-header-cell *matHeaderCellDef></th>
-    <tr mat-cell *matHeaderRowDef="let empleado">{{empleado.}}</tr>
+  <ng-container matColumnDef="nombre">
+    <th mat-header-cell *matHeaderCellDef>nombre</th>
+    <tr mat-cell *matHeaderRowDef="let empleado">{{empleado.nombre}}</tr>
   </ng-container>
-  <ng-container matColumnDef="">
-    <th mat-header-cell *matHeaderCellDef></th>
-    <tr mat-cell *matHeaderRowDef="let empleado">{{empleado.}}</tr>
+  <ng-container matColumnDef="apellido">
+    <th mat-header-cell *matHeaderCellDef>apellido</th>
+    <tr mat-cell *matHeaderRowDef="let empleado">{{empleado.apellido}}</tr>
   </ng-container>
-  <ng-container matColumnDef="">
-    <th mat-header-cell *matHeaderCellDef></th>
-    <tr mat-cell *matHeaderRowDef="let empleado">{{empleado.}}</tr>
+  <ng-container matColumnDef="dni">
+    <th mat-header-cell *matHeaderCellDef>dni</th>
+    <tr mat-cell *matHeaderRowDef="let empleado">{{empleado.dni}}</tr>
   </ng-container>
-  <ng-container matColumnDef="">
-    <th mat-header-cell *matHeaderCellDef></th>
-    <tr mat-cell *matHeaderRowDef="let empleado">{{empleado.}}</tr>
+  <ng-container matColumnDef="fechaAlta">
+    <th mat-header-cell *matHeaderCellDef>fechaAlta</th>
+    <tr mat-cell *matHeaderRowDef="let empleado">{{empleado.fechaAlta}}</tr>
   </ng-container>
+  <ng-container matColumnDef="fechaModificacion">
+    <th mat-header-cell *matHeaderCellDef>fechaModificacion</th>
+    <tr mat-cell *matHeaderRowDef="let empleado">{{empleado.fechaModificacion}}</tr>
+  </ng-container>
+  <ng-container matColumnDef="direccion">
+    <th mat-header-cell *matHeaderCellDef>direccion</th>
+    <tr mat-cell *matHeaderRowDef="let empleado">{{empleado.direccion}}</tr>
+  </ng-container>
+  <ng-container matColumnDef="sueldo">
+    <th mat-header-cell *matHeaderCellDef>sueldo</th>
+    <tr mat-cell *matHeaderRowDef="let empleado">{{empleado.sueldo}}</tr>
+  </ng-container>
+  <ng-container matColumnDef="tipoEmpleado">
+    <th mat-header-cell *matHeaderCellDef>tipoEmpleado</th>
+    <tr mat-cell *matHeaderRowDef="let empleado">{{empleado.tipoEmpleado}}</tr>
+  </ng-container>
+  <ng-container matColumnDef="pabellon">
+    <th mat-header-cell *matHeaderCellDef>pabellon</th>
+    <tr mat-cell *matHeaderRowDef="let empleado">{{empleado.pabellon}}</tr>
+  </ng-container>
+
+  <!-- Definir las cabeceras -->
+  <tr mat-header-row *matHeaderRowDef="['id','nombre','apellido','dni','fechaAlta',
+  'fechaModificacion','direccion','sueldo','tipoEmpleado','pabellon']"></tr>
+  <!-- Definir las filas -->
+  <tr mat-row *matRowDef="let row; columns:['id','nombre','apellido','dni','fechaAlta',
+  'fechaModificacion','direccion','sueldo','tipoEmpleado','pabellon']"></tr>
 </table>
